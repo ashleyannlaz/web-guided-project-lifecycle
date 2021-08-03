@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
 
 const AppFunc = () => {
-  console.log(hello);
+  console.log("App");
   const [name, setName] = useState("Warren");
 
   useEffect(() => {
-    console.log(`App has mounted`)
+    console.log("Component has mounted")
   }, []);
   
+  useEffect(() => {
+    console.log('Component has updated')
+  })
   const handleClick = () => {
-    console.log('Change State');
+    // console.log('Change State');
     setName("Allison");
   };
-  console.log('Render DOM');
+  // console.log('Render DOM');
   return (
     <div>
       <h1>Hello {name}!</h1>

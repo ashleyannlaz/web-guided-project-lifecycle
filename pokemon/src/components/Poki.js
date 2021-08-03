@@ -1,9 +1,13 @@
 import React from 'react';
 
 class Poki extends React.Component {
+  componentDidMount(){
+    console.log(`Poke ${this.props.pokemon.name}: Mounts`)
+  }
+
     render() {
         const { pokemon } = this.props;
-
+        console.log(`Poki ${this.props.pokemon.name}: Renders`)
         return(
         <div key={pokemon.id} className="pokemon">
           <img src={pokemon.img} alt={pokemon.name} />
